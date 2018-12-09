@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+{% if page.header %}
+    <header class="o-row c-header">
+        <div class="c-avatar">
+            <img src="/assets/img/me.jpg" alt="{{ site.title }}" class="c-avatar__image">
+        </div>
+
+        <section class="c-header__content">
+            <h1 class="c-header__title">
+                <span class="c-header__title__part">{{ site.data.personal.first_name }}</span>
+                <span class="c-header__title__part u-bold">{{ site.data.personal.last_name }}</span>
+            </h1>
+
+            <h2>{{ site.data.personal.title }}</h2>
+        </section>
+    </header>
+{% endif %}

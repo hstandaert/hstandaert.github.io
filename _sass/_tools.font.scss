@@ -1,0 +1,15 @@
+// ===
+// Tools > Font
+// ===
+
+@mixin font($name, $filename: $name, $font-weight: $font-weight-regular, $font-style: normal) {
+	@font-face {
+		font-family: $name;
+		src: url('#{$path-fonts + $filename}.eot?#iefix') format('embedded-opentype'),
+			url('#{$path-fonts + $filename}.woff') format('woff'),
+			url('#{$path-fonts + $filename}.ttf')  format('truetype'),
+			url('#{$path-fonts + $filename}.svg#Aller') format('svg');
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}

@@ -1,0 +1,24 @@
+// ===
+// Settings > Typography
+// ===
+
+$font-serif:      serif !default;
+$font-sans-serif: 'Aller', sans-serif !default;
+$font-monospace:  'Courier', monospace !default;
+
+$font-size-large:   19px !default;
+$font-size-base:    16px !default;
+$font-size-medium:  14px !default;
+$font-size-small:   12px !default;
+$font-size-tiny:    12px !default;
+
+$font-weight-light:   300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-bold:    700 !default;
+
+$line-height-base:    round($font-size-base    * 1.7) !default;
+$line-height-medium:  round($font-size-medium  * 1.55) !default;
+$line-height-small:   round($font-size-small   * 1.55) !default;
+$line-height-tiny:    round($font-size-tiny    * 1.55) !default;
+
+$path-fonts: '/assets/fonts/' !default;

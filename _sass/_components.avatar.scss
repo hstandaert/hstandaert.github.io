@@ -1,0 +1,21 @@
+// ===
+// Components > Avatar
+// ===
+
+$avatar-size: 10rem !default;
+$avatar-border-width: 5px !default;
+$avatar-border-color: $color-primary !default;
+
+.c-avatar {
+	border-radius: 50%;
+	width: $avatar-size;
+	height: $avatar-size;
+	overflow: hidden;
+	border: $avatar-border-width solid $avatar-border-color;
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

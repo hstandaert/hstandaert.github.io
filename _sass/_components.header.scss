@@ -1,0 +1,21 @@
+// ===
+// Components > Header
+// ===
+
+.c-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__content {
+
+	}
+
+	&__title {
+		text-align: right;
+
+		&__part {
+			display: block;
+		}
+	}
+}
