@@ -2,4 +2,6 @@
 // Generic > Fonts
 // ===
 
-@include font('Aller')
+@include font('Aller');
+@include font('Aller', 'Aller-Bold', $font-weight-bold);
+@include font('Aller', 'Aller-Light', $font-weight-light);

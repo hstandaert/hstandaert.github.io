@@ -2,17 +2,23 @@
 // Components > Header
 // ===
 
+$header-font-size: 54px !default;
+
 .c-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
-	&__content {
+	&__image {
+		flex-shrink: 0;
+	}
 
+	&__content {
+		text-align: right;
 	}
 
 	&__title {
-		text-align: right;
+		font-size: $header-font-size;
 
 		&__part {
 			display: block;

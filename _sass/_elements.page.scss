@@ -9,9 +9,8 @@ body {
 	font-family: $font-sans-serif;
 	font-weight: $font-weight-light;
 	line-height: $line-height-base;
-}
+	color: $color-text;
 
-main {
 	width: 100%;
 	margin: 0 auto;
 	max-width: $page-width;

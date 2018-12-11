@@ -4,7 +4,7 @@ layout: default
 
 {% if page.header %}
     <header class="o-row c-header">
-        <div class="c-avatar">
+        <div class="c-avatar c-header__image">
             <img src="/assets/img/me.jpg" alt="{{ site.title }}" class="c-avatar__image">
         </div>
 
@@ -18,3 +18,30 @@ layout: default
         </section>
     </header>
 {% endif %}
+
+<main>
+    <section id="experience" class="c-timeline">
+        <h3 class="c-timeline__title">Ervaring</h3>
+        <dl class="c-timeline__list">
+            {% for item in site.data.experience %}
+                <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
+                <dd>
+                    <article class="c-timeline__item">
+                        <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                        <div>
+                            <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
+                            <span>{{ item.location }}</span>
+                        </div>
+
+                        <p>In de rol van consultant pik ik snel de nieuwste technologieën op de markt op. Bij Pàu krijg ik de kans om mezelf te ontplooien als developer en op technisch vlak expertise op te bouwen.</p>
+                    </article>
+
+                </dd>
+            {% endfor %}
+        </dl>
+    </section>
+</main>
+
+<aside>
+
+</aside>
