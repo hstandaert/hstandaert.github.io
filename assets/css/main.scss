@@ -8,6 +8,7 @@
 @import "settings.spacing";
 
 @import "tools.font";
+@import "tools.icons";
 
 @import "generic.normalize";
 @import "generic.reset";
@@ -15,13 +16,14 @@
 @import "generic.fonts";
 
 @import "elements.page";
-@import "elements.headings";
+@import "elements.typography";
 
 @import "objects.row";
 
 @import "components.header";
 @import "components.avatar";
 @import "components.timeline";
+@import "components.icons";
 
 @import "utilities.typography";
 

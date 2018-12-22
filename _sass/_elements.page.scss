@@ -3,6 +3,7 @@
 // ===
 
 $page-width: 60rem !default;
+$page-main-width: 70% !default;
 
 body {
 	font-size: $font-size-base;
@@ -10,6 +11,8 @@ body {
 	font-weight: $font-weight-light;
 	line-height: $line-height-base;
 	color: $color-text;
+	display: flex;
+	flex-wrap: wrap;
 
 	width: 100%;
 	margin: 0 auto;
@@ -19,4 +22,15 @@ body {
 	border-width: 10px 0;
 
 	min-height: 100vh;
+}
+
+main {
+	display: inline-block;
+	width: $page-main-width;
+}
+
+aside {
+	display: inline-block;
+	width: calc(#{100% - $page-main-width} - 1.5rem);
+	padding-left: 1.5rem;
 }

@@ -5,13 +5,12 @@
 $timeline-color: $color-text !default;
 $timeline-accent-color: $color-primary !default;
 $timeline-bullet-size: 1rem !default;
+$timeline-left-column-size: 15% !default;
 
 .c-timeline {
 	&__title {
-		color: $timeline-accent-color;
-		text-transform: uppercase;
-		font-weight: $font-weight-light;
-		margin-left: calc(25% + 1rem);
+		margin-left: calc(#{$timeline-left-column-size} + 1rem);
+		margin-bottom: 0;
 	}
 
 	&__list {
@@ -19,16 +18,16 @@ $timeline-bullet-size: 1rem !default;
 		flex-wrap: wrap;
 
 		> *:nth-child(odd) {
-			flex-basis: 25%;
+			flex-basis: #{$timeline-left-column-size};
 		}
 
 		> *:nth-child(even) {
-			flex-basis: 75%;
+			flex-basis: 100% - $timeline-left-column-size;
 		}
 	}
 
 	&__period {
-		padding-top: 1.5rem;
+		padding-top: $h3-margin-bottom;
 		text-align: right;
 	}
 
@@ -53,6 +52,12 @@ $timeline-bullet-size: 1rem !default;
 				border-radius: 100%;
 				border: 4px solid $color-background;
 			}
+		}
+
+		&__details {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: $spacing-base;
 		}
 	}
 }

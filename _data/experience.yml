@@ -4,3 +4,26 @@
   end: Huidig
   location: Antwerpen
   url: http://pau.be/
+  description: In de rol van consultant pik ik snel de nieuwste technologieën op de markt op. Bij Pàu krijg ik de kans om mezelf te ontplooien als developer en op technisch vlak expertise op te bouwen.
+
+- employer: Sevenedge
+  title: Front-end developer
+  start: 2016
+  end: 2017
+  location: Temse
+  description: Bij Sevenedge wordt kwaliteit hoog in het vaandel gedragen. End-to-end testing, sass, jQuery en gulp zijn vanaf nu dagelijkse kost.
+
+- employer: Wijs bvba
+  title: Service Engineer
+  start: 2016
+  end: 2017
+  location: Gent
+  url: https://wijs.be
+  description: Binnen het service team, lever ik onderhoud (op alle mogelijk vlakken) voor projecten die reeds opgeleverd werden. Een afwisselende job waar zowel soft-skills als technische kwaliteiten op de proef worden gesteld.
+
+- employer: Prophets n.v.
+  title: Stagiair Development
+  end: 2014
+  location: Antwerpen
+  url: https://prophets.be/
+  description: Als stagiair mag ik actief meewerken aan de lopende projecten binnen het bedrijf, waar ik vooral front-end taken volbracht zoals het slicen designs, kleine javascript animaties en cross-browser testing.

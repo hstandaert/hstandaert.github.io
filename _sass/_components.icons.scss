@@ -1,0 +1,20 @@
+// ===
+// Components > Icons
+// ===
+
+$icon-size: $font-size-base !default;
+
+[data-icon] {
+	display: inline-block;
+	font-size: 0;
+	width: $icon-size;
+	height: $icon-size;
+	margin: 0 auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+[data-icon="marker"] {
+	background-image: icon(pin, $color-text);
+}

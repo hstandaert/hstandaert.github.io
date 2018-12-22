@@ -8,6 +8,7 @@ $header-font-size: 54px !default;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-basis: $page-main-width;
 
 	&__image {
 		flex-shrink: 0;

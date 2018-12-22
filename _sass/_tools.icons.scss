@@ -1,0 +1,44 @@
+// ===
+// Tools > Icons
+// ===
+
+/**
+	@param
+ */
+@function _buildIcon($icon, $size: false) {
+	$styles: '';
+
+	@if $size {
+		$styles: ' viewBox="0 0 #{$size} #{$size}" style="enable-background:new 0 0 #{$size} #{$size};"';
+	}
+
+	$icon: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"#{$styles}>#{$icon}</svg>';
+	@return $icon;
+}
+
+@function icon(
+	$icon-name,
+	$color,
+	$stroke-color: transparent,
+	$stroke-width: 0,
+	$css: ''
+){
+	// @REFACTOR: move these to a settings file somehow
+	$icons: (
+			home: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M10 20v-6h4v6h5v-8h3l-10-9-10 9h3v8z"/>',
+			heart: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M12 21.35l-1.45-1.32c-5.15-4.67-8.55-7.75-8.55-11.53 0-3.08 2.42-5.5 5.5-5.5 1.74 0 3.41.81 4.5 2.09 1.09-1.28 2.76-2.09 4.5-2.09 3.08 0 5.5 2.42 5.5 5.5 0 3.78-3.4 6.86-8.55 11.54l-1.45 1.31z"/>',
+			star: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>',
+			pin: (
+				originalSize: 512,
+				path: '<path fill="#{$color}" stroke="#{$stroke-color}" stroke-width="#{$stroke-width}" style="#{$css}" d="M256,0C153.755,0,70.573,83.182,70.573,185.426c0,126.888,165.939,313.167,173.004,321.035 c6.636,7.391,18.222,7.378,24.846,0c7.065-7.868,173.004-194.147,173.004-321.035C441.425,83.182,358.244,0,256,0z M256,278.719 c-51.442,0-93.292-41.851-93.292-93.293S204.559,92.134,256,92.134s93.291,41.851,93.291,93.293S307.441,278.719,256,278.719z"/>'
+			)
+	);
+
+	$icon: map-get($icons, $icon-name);
+	@if map-has-key($icon, path) {
+		@return url('data:image/svg+xml;utf8,#{_buildIcon(map-get($icon, path), map-get($icon, originalSize))}');
+	} @else {
+		@return url('data:image/svg+xml;utf8,#{_buildIcon($icon)}');
+	}
+
+}

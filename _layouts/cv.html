@@ -28,12 +28,20 @@ layout: default
                 <dd>
                     <article class="c-timeline__item">
                         <h4 class="c-timeline__item__title">{{ item.title }}</h4>
-                        <div>
-                            <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
-                            <span>{{ item.location }}</span>
+                        <div class="c-timeline__item__details">
+                            {% if item.url %}
+                                <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
+                            {% else %}
+                                <span>{{ item.employer }}</span>
+                            {% endif %}
+
+                            <span>
+                                <i data-icon="marker"></i>
+                                {{ item.location }}
+                            </span>
                         </div>
 
-                        <p>In de rol van consultant pik ik snel de nieuwste technologieën op de markt op. Bij Pàu krijg ik de kans om mezelf te ontplooien als developer en op technisch vlak expertise op te bouwen.</p>
+                        <p>{{ item.description }}</p>
                     </article>
 
                 </dd>
@@ -43,5 +51,11 @@ layout: default
 </main>
 
 <aside>
+    <h3>
+        <i data-icon="person"></i>
+        Over mezelf
+    </h3>
 
+    <p>Als developer ga ik regelmatig op zoek naar nieuwe tools/technieken om uit te proberen. Door de gezondemix tussen front- en backend ervaring, vind ik het erg belangrijk om een goed afgewerkt, getest eindproduct af te leveren.</p>
+    <p>In mijn vrije tijd ben ik vooral bezig met muziek en ik ga ook regelmatig zwemmen.</p>
 </aside>
