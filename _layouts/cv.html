@@ -20,8 +20,11 @@ layout: default
 {% endif %}
 
 <main>
-    <section id="experience" class="c-timeline">
-        <h3 class="c-timeline__title">Ervaring</h3>
+    <section id="experience" class="c-timeline o-row">
+        <h3 class="c-timeline__title">
+            <i data-icon="suitcase"></i>
+            Ervaring
+        </h3>
         <dl class="c-timeline__list">
             {% for item in site.data.experience %}
                 <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
@@ -41,7 +44,7 @@ layout: default
                             </span>
                         </div>
 
-                        <p>{{ item.description }}</p>
+                        <p class="c-timeline__item__description">{{ item.description }}</p>
                     </article>
 
                 </dd>
@@ -51,11 +54,13 @@ layout: default
 </main>
 
 <aside>
-    <h3>
-        <i data-icon="person"></i>
-        Over mezelf
-    </h3>
+    <section id="about" class="o-row">
+        <h3>
+            <i data-icon="person"></i>
+            Over mezelf
+        </h3>
 
-    <p>Als developer ga ik regelmatig op zoek naar nieuwe tools/technieken om uit te proberen. Door de gezondemix tussen front- en backend ervaring, vind ik het erg belangrijk om een goed afgewerkt, getest eindproduct af te leveren.</p>
-    <p>In mijn vrije tijd ben ik vooral bezig met muziek en ik ga ook regelmatig zwemmen.</p>
+        <p>Als developer ga ik regelmatig op zoek naar nieuwe tools/technieken om uit te proberen. Door de gezondemix tussen front- en backend ervaring, vind ik het erg belangrijk om een goed afgewerkt, getest eindproduct af te leveren.</p>
+        <p>In mijn vrije tijd ben ik vooral bezig met muziek en ik ga ook regelmatig zwemmen.</p>
+    </section>
 </aside>

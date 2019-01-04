@@ -5,12 +5,16 @@
 $timeline-color: $color-text !default;
 $timeline-accent-color: $color-primary !default;
 $timeline-bullet-size: 1rem !default;
-$timeline-left-column-size: 15% !default;
+$timeline-left-column-size: 10% !default;
 
 .c-timeline {
 	&__title {
 		margin-left: calc(#{$timeline-left-column-size} + 1rem);
 		margin-bottom: 0;
+
+		[data-icon] {
+			margin-left: $icon-size / -2;
+		}
 	}
 
 	&__list {
@@ -32,7 +36,7 @@ $timeline-left-column-size: 15% !default;
 	}
 
 	&__item {
-		padding-top: 1.5rem;
+		padding-top: $h3-margin-bottom;
 		padding-left: 1rem;
 		margin-left: 1rem;
 		border-left: 1px solid lighten($timeline-color, 60%);
@@ -58,6 +62,10 @@ $timeline-left-column-size: 15% !default;
 			display: flex;
 			justify-content: space-between;
 			margin-bottom: $spacing-base;
+		}
+
+		&__description {
+			margin-bottom: 0;
 		}
 	}
 }
