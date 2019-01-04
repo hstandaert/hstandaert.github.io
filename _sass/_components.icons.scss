@@ -13,8 +13,25 @@ $icon-size: $font-size-base !default;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+
+	h1 &,
+	h2 &,
+	h3 &,
+	h4 &,
+	h5 &,
+	h6 & {
+		margin-right: $icon-size / 2;
+	}
 }
 
 [data-icon="marker"] {
 	background-image: icon(pin, $color-text);
+}
+
+[data-icon="person"] {
+	background-image: icon(person, $color-text);
+}
+
+[data-icon="suitcase"] {
+	background-image: icon(suitcase, $color-text);
 }
