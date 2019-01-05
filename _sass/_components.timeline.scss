@@ -12,7 +12,7 @@ $timeline-left-column-size: 10% !default;
 		margin-left: calc(#{$timeline-left-column-size} + 1rem);
 		margin-bottom: 0;
 
-		[data-icon] {
+		.c-icon {
 			margin-left: $icon-size / -2;
 		}
 	}

@@ -3,8 +3,9 @@
 // ===
 
 $icon-size: $font-size-base !default;
+$icon-color: $color-text !default;
 
-[data-icon] {
+.c-icon {
 	display: inline-block;
 	font-size: 0;
 	width: $icon-size;
@@ -14,6 +15,8 @@ $icon-size: $font-size-base !default;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 
+	fill: $icon-color;
+
 	h1 &,
 	h2 &,
 	h3 &,
@@ -22,16 +25,4 @@ $icon-size: $font-size-base !default;
 	h6 & {
 		margin-right: $icon-size / 2;
 	}
-}
-
-[data-icon="marker"] {
-	background-image: icon(pin, $color-text);
-}
-
-[data-icon="person"] {
-	background-image: icon(person, $color-text);
-}
-
-[data-icon="suitcase"] {
-	background-image: icon(suitcase, $color-text);
 }
