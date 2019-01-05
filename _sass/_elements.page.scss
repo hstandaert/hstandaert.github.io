@@ -2,7 +2,7 @@
 // Elements > Page
 // ===
 
-$page-width: 60rem !default;
+$page-width: map-get($breakpoints, desktop) !default;
 $page-main-width: 65% !default;
 
 body {
@@ -22,15 +22,27 @@ body {
 	border-width: 10px 0;
 
 	min-height: 100vh;
+	padding-left: 1rem;
+	padding-right: 1rem;
+
+	@include respond-to(phablet) {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
 }
 
 main {
-	display: inline-block;
-	width: $page-main-width;
+	order: 2;
+
+	@include respond-to(desktop) {
+		flex-basis: $page-main-width;
+		order: initial;
+	}
 }
 
 aside {
-	display: inline-block;
-	width: calc(#{100% - $page-main-width} - 3rem);
-	padding-left: 3rem;
+	@include respond-to(desktop) {
+		flex-basis: calc(#{100% - $page-main-width} - 3rem);
+		padding-left: 3rem;
+	}
 }
