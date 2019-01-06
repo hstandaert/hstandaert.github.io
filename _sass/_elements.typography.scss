@@ -7,6 +7,10 @@ $h3-margin-bottom: 2rem !default;
 
 p {
 	margin-bottom: $p-margin-bottom;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
 }
 
 // Headings

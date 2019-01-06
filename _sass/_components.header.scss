@@ -2,20 +2,40 @@
 // Components > Header
 // ===
 
-$header-font-size: 54px !default;
+$header-font-size: 3.4rem !default;
 
 .c-header {
+	text-align: center;
+	min-height: 100vh;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-basis: $page-main-width;
+	flex-direction: column;
+	justify-content: center;
+
+	@include respond-to(tablet) {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 0;
+	}
+
+	@include respond-to(desktop) {
+		width: $page-main-width;
+		grid-column: 1 / span 2;
+	}
 
 	&__image {
+		margin: 0 auto 3rem;
 		flex-shrink: 0;
+
+		@include respond-to(tablet) {
+			margin: 0;
+		}
 	}
 
 	&__content {
-		text-align: right;
+		@include respond-to(tablet) {
+			text-align: right;
+		}
 	}
 
 	&__title {
@@ -23,6 +43,16 @@ $header-font-size: 54px !default;
 
 		&__part {
 			display: block;
+		}
+	}
+
+	&__scroll-down {
+		font-size: 5rem;
+		text-decoration: none;
+		color: $color-text;
+
+		@include respond-to(tablet) {
+			display: none;
 		}
 	}
 }
