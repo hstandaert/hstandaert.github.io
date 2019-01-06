@@ -2,12 +2,11 @@
 // Components > Icons
 // ===
 
-$icon-size: $font-size-base !default;
+$icon-size: 1em !default;
 $icon-color: $color-text !default;
 
 .c-icon {
 	display: inline-block;
-	font-size: 0;
 	width: $icon-size;
 	height: $icon-size;
 	margin: 0 auto;

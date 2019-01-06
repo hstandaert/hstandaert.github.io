@@ -5,15 +5,14 @@
 $timeline-color: $color-text !default;
 $timeline-accent-color: $color-primary !default;
 $timeline-bullet-size: 1rem !default;
-$timeline-left-column-size: 10% !default;
+$timeline-left-column-size: 6ch !default;
 
 .c-timeline {
 	&__title {
-		margin-left: calc(#{$timeline-left-column-size} + 1rem);
-		margin-bottom: 0;
+		@include respond-to(desktop) {
+			margin-left: $timeline-left-column-size;
+			margin-bottom: 0;
 
-		.c-icon {
-			margin-left: $icon-size / -2;
 		}
 	}
 
@@ -26,7 +25,7 @@ $timeline-left-column-size: 10% !default;
 		}
 
 		> *:nth-child(even) {
-			flex-basis: 100% - $timeline-left-column-size;
+			flex-basis: calc(100% - #{$timeline-left-column-size});
 		}
 	}
 
@@ -39,7 +38,16 @@ $timeline-left-column-size: 10% !default;
 		padding-top: $h3-margin-bottom;
 		padding-left: 1rem;
 		margin-left: 1rem;
+		padding-bottom: 1rem;
 		border-left: 1px solid lighten($timeline-color, 60%);
+
+		&:first-of-type {
+			padding-top: 0;
+
+			@include respond-to(desktop) {
+				padding-top: $h3-margin-bottom;
+			}
+		}
 
 		&__title {
 			position: relative;
