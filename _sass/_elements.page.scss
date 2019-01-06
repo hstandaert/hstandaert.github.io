@@ -11,8 +11,7 @@ body {
 	font-weight: $font-weight-light;
 	line-height: $line-height-base;
 	color: $color-text;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
 
 	width: 100%;
 	margin: 0 auto;
@@ -29,20 +28,17 @@ body {
 		padding-left: 2rem;
 		padding-right: 2rem;
 	}
+
+	@include respond-to(desktop) {
+		grid-template-columns: $page-main-width auto;
+		grid-column-gap: 3rem;
+	}
 }
 
 main {
 	order: 2;
 
 	@include respond-to(desktop) {
-		flex-basis: $page-main-width;
 		order: initial;
-	}
-}
-
-aside {
-	@include respond-to(desktop) {
-		flex-basis: calc(#{100% - $page-main-width} - 3rem);
-		padding-left: 3rem;
 	}
 }

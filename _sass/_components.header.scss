@@ -6,7 +6,6 @@ $header-font-size: 3.4rem !default;
 
 .c-header {
 	text-align: center;
-	flex-basis: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -20,7 +19,8 @@ $header-font-size: 3.4rem !default;
 	}
 
 	@include respond-to(desktop) {
-		flex-basis: $page-main-width;
+		width: $page-main-width;
+		grid-column: 1 / span 2;
 	}
 
 	&__image {
