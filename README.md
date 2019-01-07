@@ -4,7 +4,7 @@
 
 > Online version of my resume
 
-![travis](https://travis-ci.org/hstandaert/hstandaert.github.io.svg?branch=develop)
+[![Build Status](https://travis-ci.org/hstandaert/hstandaert.github.io.svg?branch=develop)](https://travis-ci.org/hstandaert/hstandaert.github.io)
 [![Known Vulnerabilities](https://snyk.io/test/github/hstandaert/hstandaert.github.io/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/hstandaert/hstandaert.github.io?targetFile=Gemfile.lock)
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://badges.mit-license.org)
 
