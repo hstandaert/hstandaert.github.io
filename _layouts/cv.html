@@ -30,25 +30,22 @@ layout: default
         <dl class="c-timeline__list">
             {% for item in site.data.experience %}
                 <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
-                <dd>
-                    <article class="c-timeline__item">
-                        <h4 class="c-timeline__item__title">{{ item.title }}</h4>
-                        <div class="c-timeline__item__details">
-                            {% if item.url %}
-                                <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
-                            {% else %}
-                                <span>{{ item.employer }}</span>
-                            {% endif %}
+                <dd class="c-timeline__item">
+                    <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                    <div class="c-timeline__item__details">
+                        {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
+                        {% else %}
+                            <span>{{ item.employer }}</span>
+                        {% endif %}
 
-                            <span>
-                                {% include icon/marker.html %}
-                                {{ item.location }}
-                            </span>
-                        </div>
+                        <span>
+                            {% include icon/marker.html %}
+                            {{ item.location }}
+                        </span>
+                    </div>
 
-                        <p class="c-timeline__item__description">{{ item.description }}</p>
-                    </article>
-
+                    <p class="c-timeline__item__description">{{ item.description }}</p>
                 </dd>
             {% endfor %}
         </dl>
@@ -62,28 +59,48 @@ layout: default
         <dl class="c-timeline__list">
             {% for item in site.data.education %}
             <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
-            <dd>
-                <article class="c-timeline__item">
-                    <h4 class="c-timeline__item__title">{{ item.title }}</h4>
-                    <div class="c-timeline__item__details">
-                        {% if item.url %}
-                            <a href="{{ item.url }}" target="_blank">{{ item.school }}</a>
-                        {% else %}
-                            <span>{{ item.school }}</span>
-                        {% endif %}
+            <dd class="c-timeline__item">
+                <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                <div class="c-timeline__item__details">
+                    {% if item.url %}
+                        <a href="{{ item.url }}" target="_blank">{{ item.school }}</a>
+                    {% else %}
+                        <span>{{ item.school }}</span>
+                    {% endif %}
 
-                        <span>
-                            {% include icon/marker.html %}
-                            {{ item.location }}
-                        </span>
-                    </div>
+                    <span>
+                        {% include icon/marker.html %}
+                        {{ item.location }}
+                    </span>
+                </div>
 
-                    <p class="c-timeline__item__description">{{ item.description }}</p>
-                </article>
-
+                <p class="c-timeline__item__description">{{ item.description }}</p>
             </dd>
             {% endfor %}
         </dl>
+    </section>
+
+    <section id="contact" class="o-row c-timeline__section">
+        <h3>Contact</h3>
+
+        <ul class="o-list o-list--bare">
+            <li>
+                {% include icon/envelope.html className="o-list__bullet" %}
+                <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a>
+            </li>
+            <li>
+                {% include icon/phone.html className="o-list__bullet" %}
+                <a href="tel:{{ site.data.personal.phone  | replace: " ", "" }}">{{ site.data.personal.phone }}</a>
+            </li>
+            <li>
+                {% include icon/linkedin.html className="o-list__bullet" %}
+                <a href="{{ site.data.personal.linkedin | prepend: "http://" }}" target="_blank">{{ site.data.personal.linkedin }}</a>
+            </li>
+            <li>
+                {% include icon/marker.html className="o-list__bullet" %}
+                <a href="https://maps.google.com/q={{ site.data.personal.city }}" target="_blank">{{ site.data.personal.city }}</a>
+            </li>
+        </ul>
     </section>
 </main>
 
