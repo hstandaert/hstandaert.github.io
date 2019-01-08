@@ -53,6 +53,38 @@ layout: default
             {% endfor %}
         </dl>
     </section>
+
+    <section id="education" class="c-timeline o-row">
+        <h3 class="c-timeline__title">
+            {% include icon/book.html %}
+            Opleiding
+        </h3>
+        <dl class="c-timeline__list">
+            {% for item in site.data.education %}
+            <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
+            <dd>
+                <article class="c-timeline__item">
+                    <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                    <div class="c-timeline__item__details">
+                        {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank">{{ item.school }}</a>
+                        {% else %}
+                            <span>{{ item.school }}</span>
+                        {% endif %}
+
+                        <span>
+                            {% include icon/marker.html %}
+                            {{ item.location }}
+                        </span>
+                    </div>
+
+                    <p class="c-timeline__item__description">{{ item.description }}</p>
+                </article>
+
+            </dd>
+            {% endfor %}
+        </dl>
+    </section>
 </main>
 
 <aside>
