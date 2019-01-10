@@ -75,6 +75,8 @@ $timeline-left-column-size: 7ch !default;
 	}
 
 	&__section {
-		padding-left: $timeline-left-column-size;
+		@include respond-to(tablet) {
+			padding-left: $timeline-left-column-size;
+		}
 	}
 }
