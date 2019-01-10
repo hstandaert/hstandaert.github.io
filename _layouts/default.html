@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    {% if page.title %}
+        <title>{{ page.title | append: ' | ' | append: site.title }}</title>
+    {% else %}
+        <title>{{ site.title }}</title>
+    {% endif %}
     <link rel="stylesheet" href="/assets/css/main.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
