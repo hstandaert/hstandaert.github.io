@@ -9,10 +9,10 @@ $icon-color: $color-text !default;
 	display: inline-block;
 	width: $icon-size;
 	height: $icon-size;
-	margin: 0 auto;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
+	vertical-align: -10%;
 
 	fill: $icon-color;
 

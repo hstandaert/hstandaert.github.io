@@ -5,39 +5,36 @@
 $timeline-color: $color-text !default;
 $timeline-accent-color: $color-primary !default;
 $timeline-bullet-size: 1rem !default;
-$timeline-left-column-size: 6ch !default;
+$timeline-left-column-size: 7ch !default;
 
 .c-timeline {
 	&__title {
 		@include respond-to(desktop) {
-			margin-left: $timeline-left-column-size;
+			margin-left: calc(#{$timeline-left-column-size} - .5em);
 			margin-bottom: 0;
 
+			.c-icon {
+				margin-left: $icon-size / -2;
+			}
 		}
 	}
 
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-
-		> *:nth-child(odd) {
-			flex-basis: #{$timeline-left-column-size};
-		}
-
-		> *:nth-child(even) {
-			flex-basis: calc(100% - #{$timeline-left-column-size});
-		}
 	}
 
 	&__period {
+		flex-basis: #{$timeline-left-column-size};
 		padding-top: $h3-margin-bottom;
 		text-align: right;
+		padding-right: 1rem;
 	}
 
 	&__item {
+		flex-basis: calc(100% - #{$timeline-left-column-size});
 		padding-top: $h3-margin-bottom;
 		padding-left: 1rem;
-		margin-left: 1rem;
 		padding-bottom: 1rem;
 		border-left: 1px solid lighten($timeline-color, 60%);
 
@@ -74,6 +71,12 @@ $timeline-left-column-size: 6ch !default;
 
 		&__description {
 			margin-bottom: 0;
+		}
+	}
+
+	&__section {
+		@include respond-to(tablet) {
+			padding-left: $timeline-left-column-size;
 		}
 	}
 }

@@ -1,0 +1,19 @@
+// ===
+// Objects > List
+// ===
+
+.o-list {
+	$this: &;
+	list-style-position: inside;
+
+	// modifiers
+	&--bare {
+		list-style: none;
+	}
+
+
+	// children
+	&__bullet {
+		margin-right: 1em;
+	}
+}
