@@ -123,8 +123,22 @@ layout: default
 
 
         <div class="o-grid o-grid--flex">
-            {% include donut.html label='Frontend' percentage=70 %}
-            {% include donut.html label='Backend' percentage=50 %}
+            {% include donut.html label='Frontend' percentage=75 %}
+            {% include donut.html label='Backend' percentage=40 %}
         </div>
+
+
+        <ul class="o-list o-list--bare">
+        {% for skill in site.data.skills %}
+            {% if skill.whitespace == true %}
+                <li class="c-skill c-skill--empty"></li>
+                {% continue %}
+            {% endif %}
+
+            <li class="c-skill" data-score="{{ skill.score }}">
+                {{ skill.name }}
+            </li>
+        {% endfor %}
+        </ul>
     </section>
 </aside>
