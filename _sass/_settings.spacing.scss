@@ -3,3 +3,15 @@
 // ===
 
 $spacing-base: 1rem !default;
+
+$spacing-factor-tiny: .25 !default;
+$spacing-factor-small: .5 !default;
+$spacing-factor: 1 !default;
+$spacing-factor-large: 2 !default;
+$spacing-factor-huge: 4 !default;
+
+$spacing-tiny: $spacing-base * $spacing-factor-tiny !default;
+$spacing-small: $spacing-base * $spacing-factor-small !default;
+$spacing: $spacing-base * $spacing-factor !default;
+$spacing-large: $spacing-base * $spacing-factor-large !default;
+$spacing-huge: $spacing-base * $spacing-factor-huge !default;

@@ -1,0 +1,43 @@
+// ===
+// Components > Skill
+// ===
+
+$skill-background: $swatch-gray-light !default;
+$skill-accent: $swatch-gray-dark !default;
+
+@function skill($score, $max: 5, $radius: 40) {
+	$position: $max*10;
+	$width: $max*100;
+	$height: 100;
+	$content: '';
+
+	@for $i from 1 through $max {
+
+		$fill: $skill-background;
+
+		@if $i <= $score {
+			$fill: $skill-accent;
+		}
+
+		$content: $content + '<circle fill="#{$fill}" cx="#{$position}" cy="50" r="#{$radius}"/>';
+		$position: $position + 100;
+	}
+
+
+	@return '<svg width="#{$width}" height="#{$height}" viewBox="0 0 #{$width} #{$height}" xmlns="http://www.w3.org/2000/svg">#{$content}</svg>';
+}
+
+.c-skill {
+	background: no-repeat right;
+	background-size: auto .8rem;
+
+	@for $i from 0 through 5 {
+	    &[data-score="#{$i}"] {
+		    background-image: url(svg-encode(skill($i)));
+	    }
+	}
+
+	&--empty {
+		height: 1em;
+	}
+}

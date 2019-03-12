@@ -30,28 +30,77 @@ layout: default
         <dl class="c-timeline__list">
             {% for item in site.data.experience %}
                 <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
-                <dd>
-                    <article class="c-timeline__item">
-                        <h4 class="c-timeline__item__title">{{ item.title }}</h4>
-                        <div class="c-timeline__item__details">
-                            {% if item.url %}
-                                <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
-                            {% else %}
-                                <span>{{ item.employer }}</span>
-                            {% endif %}
+                <dd class="c-timeline__item">
+                    <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                    <div class="c-timeline__item__details">
+                        {% if item.url %}
+                            <a href="{{ item.url }}" target="_blank">{{ item.employer }}</a>
+                        {% else %}
+                            <span>{{ item.employer }}</span>
+                        {% endif %}
 
-                            <span>
-                                <i data-icon="marker"></i>
-                                {{ item.location }}
-                            </span>
-                        </div>
+                        <span>
+                            {% include icon/marker.html %}
+                            {{ item.location }}
+                        </span>
+                    </div>
 
-                        <p class="c-timeline__item__description">{{ item.description }}</p>
-                    </article>
-
+                    <p class="c-timeline__item__description">{{ item.description }}</p>
                 </dd>
             {% endfor %}
         </dl>
+    </section>
+
+    <section id="education" class="c-timeline o-row">
+        <h3 class="c-timeline__title">
+            {% include icon/book.html %}
+            Opleiding
+        </h3>
+        <dl class="c-timeline__list">
+            {% for item in site.data.education %}
+            <dt class="c-timeline__period">{{ item.end }}<br/>{{ item.start }}</dt>
+            <dd class="c-timeline__item">
+                <h4 class="c-timeline__item__title">{{ item.title }}</h4>
+                <div class="c-timeline__item__details">
+                    {% if item.url %}
+                        <a href="{{ item.url }}" target="_blank">{{ item.school }}</a>
+                    {% else %}
+                        <span>{{ item.school }}</span>
+                    {% endif %}
+
+                    <span>
+                        {% include icon/marker.html %}
+                        {{ item.location }}
+                    </span>
+                </div>
+
+                <p class="c-timeline__item__description">{{ item.description }}</p>
+            </dd>
+            {% endfor %}
+        </dl>
+    </section>
+
+    <section id="contact" class="o-row c-timeline__section">
+        <h3>Contact</h3>
+
+        <ul class="o-list o-list--bare">
+            <li>
+                {% include icon/envelope.html className="o-list__bullet" %}
+                <a href="mailto:{{ site.data.personal.email }}">{{ site.data.personal.email }}</a>
+            </li>
+            <li>
+                {% include icon/phone.html className="o-list__bullet" %}
+                <a href="tel:{{ site.data.personal.phone  | replace: " ", "" }}">{{ site.data.personal.phone }}</a>
+            </li>
+            <li>
+                {% include icon/linkedin.html className="o-list__bullet" %}
+                <a href="{{ site.data.personal.linkedin | prepend: "http://" }}" target="_blank">{{ site.data.personal.linkedin }}</a>
+            </li>
+            <li>
+                {% include icon/marker.html className="o-list__bullet" %}
+                <a href="https://maps.google.com/q={{ site.data.personal.city }}" target="_blank">{{ site.data.personal.city }}</a>
+            </li>
+        </ul>
     </section>
 </main>
 
@@ -64,5 +113,48 @@ layout: default
 
         <p>Als developer ga ik regelmatig op zoek naar nieuwe tools/technieken om uit te proberen. Door de gezondemix tussen front- en backend ervaring, vind ik het erg belangrijk om een goed afgewerkt, getest eindproduct af te leveren.</p>
         <p>In mijn vrije tijd ben ik vooral bezig met muziek en ik ga ook regelmatig zwemmen.</p>
+    </section>
+
+    <section id="skills" class="o-row">
+        <h3>
+            {% include icon/graph.html %}
+            Skills
+        </h3>
+
+
+        <div class="o-grid o-grid--flex u-margin-bottom">
+            {% include donut.html label='Frontend' percentage=75 %}
+            {% include donut.html label='Backend' percentage=40 %}
+        </div>
+
+
+
+        <ul class="o-list o-list--bare">
+        {% for skill in site.data.skills %}
+            {% if skill.whitespace == true %}
+                <li class="c-skill c-skill--empty"></li>
+                {% continue %}
+            {% endif %}
+
+            <li class="c-skill" data-score="{{ skill.score }}">
+                {{ skill.name }}
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+
+    <section id="languages" class="o-row">
+        <h3>
+            {% include icon/flag.html %}
+            Talen
+        </h3>
+
+        <ul class="o-list o-list--bare">
+        {% for language in site.data.languages %}
+            <li class="c-skill" data-score="{{ language.score }}">
+                {{ language.name }}
+            </li>
+        {% endfor %}
+        </ul>
     </section>
 </aside>

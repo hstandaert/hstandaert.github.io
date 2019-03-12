@@ -1,0 +1,20 @@
+// ===
+// Tools > SVG Encode
+// ===
+
+$encoding-reference: (
+	//('%','%25'),  // Encode "%" first, otherwise the "%" from encoded code would be encoded again (which would be bad)
+	('<','%3C'),
+	('>','%3E'),
+	//('"','%22'),  // Replace " with ' because that's shorter than %22 and normally working
+	('"','\''),
+	('#','%23'),
+	('&','%26')
+);
+
+@function svg-encode($svg) {
+	@each $char, $encoded in $encoding-reference {
+		$svg: str-replace($svg, $char, $encoded);
+	}
+	@return 'data:image/svg+xml,' + $svg;
+}

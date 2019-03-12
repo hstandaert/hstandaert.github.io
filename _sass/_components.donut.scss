@@ -1,0 +1,39 @@
+// ===
+// Components > Donut
+// ===
+
+$donut-stroke-width: 2 !default;
+$donut-background-color: $swatch-gray-light !default;
+$donut-accent-color: $color-primary !default;
+
+.c-donut {
+	position: relative;
+
+	&__hole {
+		fill: transparent;
+	}
+
+	&__ring {
+		fill: transparent;
+		stroke: $donut-background-color;
+		stroke-width: $donut-stroke-width;
+	}
+
+	&__segment {
+		stroke: $donut-accent-color;
+		stroke-width: $donut-stroke-width;
+		fill: transparent;
+	}
+
+	&__label {
+		position: absolute;
+		display: flex;
+		width: 50%;
+		height: 50%;
+		top: 25%;
+		left: 25%;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}
