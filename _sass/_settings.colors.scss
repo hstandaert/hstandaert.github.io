@@ -6,8 +6,11 @@ $swatch-gray: #666;
 $swatch-gray-light: #ccc;
 $swatch-gray-dark: darken($swatch-gray, 10%);
 $swatch-blue: #287BA7;
+$swatch-blue-light: lighten($swatch-blue, 20%);
 $swatch-white: #fff;
 
 $color-primary: $swatch-blue !default;
 $color-text: #444 !default;
 $color-background: $swatch-white !default;
+
+$color-link: $swatch-blue-light !default;
