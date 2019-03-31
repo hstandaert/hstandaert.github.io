@@ -1,0 +1,56 @@
+// ===
+// Plugins > Github Corners
+// ===
+
+$gh-corner-size: 80px !default;
+$gh-corner-color: $color-primary !default;
+
+.github-corner {
+  svg {
+    width: $gh-corner-size;
+    height: $gh-corner-size;
+    fill: $gh-corner-color;
+    color:#fff;
+    position: absolute;
+    top: 10px;
+    border: 0;
+    right: 0;
+
+    @include respond-to(desktop) {
+      top: 0;
+    }
+  }
+
+  &:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
+
+@media (max-width:500px) {
+  .github-corner:hover .octo-arm {
+    animation: none
+  }
+
+  .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+  }
+}
+
+// Animation
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0)
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg)
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg)
+  }
+}
