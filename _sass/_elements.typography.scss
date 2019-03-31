@@ -37,7 +37,7 @@ h3 {
 }
 
 // Links
-a {
+a:not(.u-clean-link) {
 	color: $color-text;
 	text-decoration: none;
 	border-bottom: 1px solid $link-color;
