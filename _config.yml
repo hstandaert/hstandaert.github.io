@@ -11,3 +11,14 @@ timezone: "Europe/Brussels"
 # Build settings
 markdown: kramdown
 exclude: [vendor]
+
+# Plugins
+plugins:
+  - jekyll-autoprefixer
+
+# Plugin configuration
+autoprefixer:
+  browsers:
+    - last 2 versions
+    - IE 11
+  grid: true
