@@ -1,6 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.2.4.3)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 0.7, < 2)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     autoprefixer-rails (9.5.0)
@@ -78,6 +83,8 @@ GEM
       rb-inotify (~> 0.9, >= 0.9.7)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
+    tzinfo (1.2.7)
+      thread_safe (~> 0.1)
     yell (2.2.2)
 
 PLATFORMS
