@@ -33,12 +33,22 @@ body {
 		grid-template-columns: $page-main-width auto;
 		grid-column-gap: 3rem;
 	}
+
+	@media print {
+		border: 0;
+		grid-template-columns: $page-main-width auto;
+		grid-column-gap: 3rem;
+	}
 }
 
 main {
 	order: 2;
 
 	@include respond-to(desktop) {
+		order: initial;
+	}
+
+	@media print {
 		order: initial;
 	}
 }
