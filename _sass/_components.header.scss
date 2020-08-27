@@ -23,6 +23,15 @@ $header-font-size: 3.4rem !default;
 		grid-column: 1 / span 2;
 	}
 
+	@media print {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 0;
+		width: $page-main-width;
+		grid-column: 1 / span 2;
+	}
+
 	&__image {
 		margin: 0 auto 3rem;
 		flex-shrink: 0;
@@ -52,6 +61,10 @@ $header-font-size: 3.4rem !default;
 		color: $color-text;
 
 		@include respond-to(tablet) {
+			display: none;
+		}
+
+		@media print {
 			display: none;
 		}
 	}

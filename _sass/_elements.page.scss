@@ -33,6 +33,12 @@ body {
 		grid-template-columns: $page-main-width auto;
 		grid-column-gap: 3rem;
 	}
+
+	@media print {
+		border: 0;
+		grid-template-columns: $page-main-width auto;
+		grid-column-gap: 3rem;
+	}
 }
 
 main {
@@ -40,5 +46,27 @@ main {
 
 	@include respond-to(desktop) {
 		order: initial;
+	}
+
+	@media print {
+		order: initial;
+	}
+}
+
+@media print {
+	@page {
+		size: A4; /* DIN A4 standard, Europe */
+		margin: 0;
+	}
+
+	html,
+	body {
+		width: 210mm;
+		background: #FFF;
+		font-size: 11pt;
+	}
+
+	body {
+		padding-top: 15mm;
 	}
 }

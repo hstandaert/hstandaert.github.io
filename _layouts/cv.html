@@ -51,7 +51,7 @@ layout: default
         </dl>
     </section>
 
-    <section id="education" class="c-timeline o-row">
+    <section id="education" class="c-timeline o-row u-page-break">
         <h3 class="c-timeline__title">
             {% include icon/book.html %}
             Opleiding
@@ -115,7 +115,7 @@ layout: default
         <p>In mijn vrije tijd ben ik vooral bezig met muziek en ik ga ook regelmatig zwemmen.</p>
     </section>
 
-    <section id="skills" class="o-row">
+    <section id="skills" class="o-row u-page-break">
         <h3>
             {% include icon/graph.html %}
             Skills
@@ -136,9 +136,7 @@ layout: default
                 {% continue %}
             {% endif %}
 
-            <li class="c-skill" data-score="{{ skill.score }}">
-                {{ skill.name }}
-            </li>
+            {% include dots.html skill=skill %}
         {% endfor %}
         </ul>
     </section>
@@ -151,9 +149,7 @@ layout: default
 
         <ul class="o-list o-list--bare">
         {% for language in site.data.languages %}
-            <li class="c-skill" data-score="{{ language.score }}">
-                {{ language.name }}
-            </li>
+            {% include dots.html skill=language %}
         {% endfor %}
         </ul>
     </section>
