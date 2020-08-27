@@ -149,9 +149,7 @@ layout: default
 
         <ul class="o-list o-list--bare">
         {% for language in site.data.languages %}
-            <li class="c-skill" data-score="{{ language.score }}">
-                {{ language.name }}
-            </li>
+            {% include dots.html skill=language %}
         {% endfor %}
         </ul>
     </section>
