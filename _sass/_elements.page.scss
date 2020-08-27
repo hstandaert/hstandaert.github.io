@@ -54,15 +54,19 @@ main {
 }
 
 @media print {
-    @page {
-      size: A4; /* DIN A4 standard, Europe */
-      margin: 0;
-    }
-    html, body {
-        width: 210mm;
-        background: #FFF;
-    }
-    body {
-        padding-top:15mm;
-    }
+	@page {
+		size: A4; /* DIN A4 standard, Europe */
+		margin: 0;
+	}
+
+	html,
+	body {
+		width: 210mm;
+		background: #FFF;
+		font-size: 11pt;
+	}
+
+	body {
+		padding-top: 15mm;
+	}
 }
