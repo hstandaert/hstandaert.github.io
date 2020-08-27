@@ -7,23 +7,24 @@
 - name: Javascript/es2018
   score: 4
 
-- name: Gulp
-  score: 4
-
-- name: Webpack
+- name: React
   score: 3
 
-- name: PHP
-  score: 4
+- name: React Native
+  score: 2
 
-- name: MySQL
-  score: 3
+- name: Build tools
+  score: 4
 
 - name: GIT
   score: 5
 
-- name: React
-  score: 2
+- name: PHP
+  score: 3
+
+- name: MySQL
+  score: 3
+
 
 - whitespace: true
 
@@ -40,4 +41,3 @@
 
 - name: Oplossingsgerichtheid
   score: 4
-
