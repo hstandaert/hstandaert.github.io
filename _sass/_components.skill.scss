@@ -28,16 +28,23 @@ $skill-accent: $swatch-gray-dark !default;
 }
 
 .c-skill {
-	background: no-repeat right;
-	background-size: auto .8rem;
-
-	@for $i from 0 through 5 {
-	    &[data-score="#{$i}"] {
-		    background-image: url(svg-encode(skill($i)));
-	    }
-	}
+	display: flex;
 
 	&--empty {
 		height: 1em;
+	}
+
+	&__dots {
+		margin-left: auto;
+		width: auto;
+		height: .8rem;
+	}
+
+	&__dot {
+		fill: $skill-background;
+
+		&--accent {
+			fill: $skill-accent;
+		}
 	}
 }

@@ -1,0 +1,17 @@
+<li class="c-skill">
+  {{ include.skill.name }}
+
+  <svg xmlns="http://www.w3.org/2000/svg" class="c-skill__dots" width="500" height="100" viewBox="0 0 500 100">
+    {% assign position = 50 %}
+
+    {% for i in (1..include.skill.score) %}
+      <circle class="c-skill__dot c-skill__dot--accent" cx="{{ position }}" cy="50" r="40" />
+      {% assign position = position | plus: 100 %}
+    {% endfor %}
+
+    {% for i in (include.skill.score..4) %}
+      <circle class="c-skill__dot" cx="{{ position }}" cy="50" r="40" />
+      {% assign position = position | plus: 100 %}
+    {% endfor %}
+  </svg>
+</li>

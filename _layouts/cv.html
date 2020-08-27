@@ -136,9 +136,7 @@ layout: default
                 {% continue %}
             {% endif %}
 
-            <li class="c-skill" data-score="{{ skill.score }}">
-                {{ skill.name }}
-            </li>
+            {% include dots.html skill=skill %}
         {% endfor %}
         </ul>
     </section>
