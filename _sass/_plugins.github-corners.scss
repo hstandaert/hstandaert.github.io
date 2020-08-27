@@ -24,6 +24,10 @@ $gh-corner-color: $color-primary !default;
   &:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;
   }
+
+  @media print {
+    display: none;
+  }
 }
 
 
