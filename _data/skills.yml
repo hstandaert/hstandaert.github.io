@@ -1,43 +1,34 @@
-- name: HTML5
-  score: 5
-
-- name: CSS/SASS
-  score: 5
-
-- name: Javascript/es2018
-  score: 4
-
 - name: React
   score: 3
 
 - name: React Native
   score: 2
 
-- name: Build tools
+- name: Typescript
   score: 4
+
+- name: WCAG
+  score: 3
+
+- name: Build tools
+  score: 3
 
 - name: GIT
   score: 5
 
-- name: PHP
-  score: 3
-
-- name: MySQL
-  score: 3
-
-
 - whitespace: true
 
-- name: Adobe Photoshop
-  score: 3
-
-- name: Adobe Illustrator
-  score: 2
-
-- whitespace: true
+- name: Agile aanpak
+  score: 5
 
 - name: Klantencommunicatie
   score: 3
 
 - name: Oplossingsgerichtheid
+  score: 4
+
+- name: Backlog management
+  score: 4
+
+- name: Technische analyse
   score: 4
