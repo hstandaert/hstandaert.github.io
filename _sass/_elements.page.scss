@@ -6,67 +6,63 @@ $page-width: map-get($breakpoints, desktop) !default;
 $page-main-width: 65% !default;
 
 body {
-	font-size: $font-size-base;
-	font-family: $font-sans-serif;
-	font-weight: $font-weight-light;
-	line-height: $line-height-base;
-	color: $color-text;
-	display: grid;
+  font-size: $font-size-base;
+  font-family: $font-sans-serif;
+  font-weight: $font-weight-light;
+  line-height: $line-height-base;
+  color: $color-text;
+  display: grid;
 
-	width: 100%;
-	margin: 0 auto;
-	max-width: $page-width;
+  width: 100%;
+  margin: 0 auto;
+  max-width: $page-width;
 
-	border: solid $swatch-gray;
-	border-width: 10px 0;
+  border: solid $swatch-gray;
+  border-width: 10px 0;
 
-	min-height: 100vh;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  min-height: 100vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
-	@include respond-to(phablet) {
-		padding-left: 2rem;
-		padding-right: 2rem;
-	}
+  @include respond-to(phablet) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
-	@include respond-to(desktop) {
-		grid-template-columns: $page-main-width auto;
-		grid-column-gap: 3rem;
-	}
+  @include respond-to(desktop) {
+    grid-template-columns: $page-main-width auto;
+    grid-column-gap: 3rem;
+  }
 
-	@media print {
-		border: 0;
-		grid-template-columns: $page-main-width auto;
-		grid-column-gap: 3rem;
-	}
+  @media print {
+    border: 0;
+    grid-template-columns: $page-main-width auto;
+    grid-column-gap: 3rem;
+  }
 }
 
 main {
-	order: 2;
+  order: 2;
 
-	@include respond-to(desktop) {
-		order: initial;
-	}
+  @include respond-to(desktop) {
+    order: initial;
+  }
 
-	@media print {
-		order: initial;
-	}
+  @media print {
+    order: initial;
+  }
 }
 
 @media print {
-	@page {
-		size: A4; /* DIN A4 standard, Europe */
-		margin: 0;
-	}
+  @page {
+    size: A4; /* DIN A4 standard, Europe */
+    margin: 7mm 5mm 5mm 5mm;
+  }
 
-	html,
-	body {
-		width: 210mm;
-		background: #FFF;
-		font-size: 11pt;
-	}
-
-	body {
-		padding-top: 15mm;
-	}
+  html,
+  body {
+    width: 210mm;
+    background: #fff;
+    font-size: 11pt;
+  }
 }
