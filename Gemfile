@@ -27,6 +27,6 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 
 # Tests rendered HTML files to make sure they're accurate.
-gem "html-proofer", ">= 3.11.1"
+gem "html-proofer", ">= 5.0.0"
 
 gem 'execjs', '2.7.0'
