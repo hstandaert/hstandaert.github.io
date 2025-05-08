@@ -1,20 +1,31 @@
+- name: Typescript
+  score: 4
+
 - name: React
   score: 4
 
 - name: React Native
   score: 3
 
-- name: Typescript
-  score: 4
+- name: Vue
+  score: 3
 
 - name: WCAG
-  score: 3
+  score: 4
 
 - name: Build tools
   score: 3
 
 - name: GIT
   score: 5
+
+- whitespace: true
+
+- name: NodeJS
+  score: 3
+
+- name: Docker
+  score: 3
 
 - whitespace: true
 
